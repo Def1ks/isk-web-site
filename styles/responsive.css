@@ -4,6 +4,22 @@
     margin: 0px;
     width: 100%;
   }
+
+  .main-page .section-1 .text {
+    margin-left: 10%;
+  }
+
+  .main-page .section-1 .text h1{
+    font-size: 2.7rem;
+  }
+
+  .main-page .section-1 .text p{
+    font-size: 1rem;
+  }
+
+  .main-page .section-1 .text a{
+    font-size: 0.9rem;
+  }
 }
 
 /** Сенсорные устройства **/
@@ -20,11 +36,33 @@
   .menu-toggle {
     display: block;
   }
+
+  .main-page .section-1 .text {
+    width: 55%;
+  }
+
+  .main-page .section-1 .text h1{
+    font-size: 2.4rem;
+  }
+
+  .main-page .section-1 .text p{
+    font-size: 0.9rem;
+  }
+
+  .main-page .section-1 .text a{
+    font-size: 0.8rem;
+  }
 }
 
 /** Стили для телефонов **/
 @media (max-width: 800px) {
-    
+  .main-page .section-1 .text {
+    width: 75%;
+  }
+
+  .main-page .section-1 .text a {
+    width: 70%;
+  }
 }
 
 /** Стили для очень маленьких телефонов **/
