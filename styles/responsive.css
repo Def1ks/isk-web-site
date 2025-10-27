@@ -9,15 +9,15 @@
     margin-left: 10%;
   }
 
-  .main-page .hero .text h1{
+  .main-page .hero .text h1 {
     font-size: 2.7rem;
   }
 
-  .main-page .hero .text p{
+  .main-page .hero .text p {
     font-size: 1rem;
   }
 
-  .main-page .hero .text a{
+  .main-page .hero .text a {
     font-size: 0.9rem;
   }
 
@@ -26,13 +26,13 @@
   }
 
   .main-page .advantages {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /** Сенсорные устройства **/
 /** Стили для планшетов **/
-@media (max-width: 1100px) {  
+@media (max-width: 1100px) {
   .main-page header .desktop-menu {
     display: none;
   }
@@ -49,21 +49,25 @@
     width: 55%;
   }
 
-  .main-page .hero .text h1{
+  .main-page .hero .text h1 {
     font-size: 2.4rem;
   }
 
-  .main-page .hero .text p{
+  .main-page .hero .text p {
     font-size: 0.9rem;
   }
 
-  .main-page .hero .text a{
+  .main-page .hero .text a {
     font-size: 0.8rem;
   }
 
   .main-page .advantages {
     width: 80%;
   }
+  .main-page .stats-block {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
 }
 
 /** Стили для телефонов **/
@@ -75,12 +79,11 @@
   .main-page .hero .text a {
     width: 70%;
   }
+
   .main-page .advantages {
-    grid-template-columns: 1fr; /* Выстраиваем в одну колонку */
+    grid-template-columns: 1fr;
   }
 }
 
 /** Стили для очень маленьких телефонов **/
-@media (max-width: 400px) {
-
-}
+@media (max-width: 400px) {}

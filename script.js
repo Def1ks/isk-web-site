@@ -1,8 +1,16 @@
+// Функция бургер меню
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.mobile-menu'); 
 menuToggle.addEventListener('click', function() {
   this.classList.toggle('active');
   menu.classList.toggle('active'); 
+});
+
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !menuToggle.contains(e.target) && menu.classList.contains('active')) {
+    menu.classList.remove('active');
+    menuToggle.classList.remove('active');
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function animateCounters() {
   const counters = document.querySelectorAll('.stat-number');
   counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target'); // Получаем целевое число
-    const duration = 1500; // Длительность анимации в миллисекундах
+    const target = +counter.getAttribute('data-target'); 
+    const duration = 1500; 
     let start = 0;
-    const stepTime = Math.abs(Math.floor(duration / target)); // Интервал обновления
+    const stepTime = Math.abs(Math.floor(duration / target)); 
 
     const timer = setInterval(() => {
       start += 1;
@@ -25,7 +33,6 @@ function animateCounters() {
 
       if (start === target) {
         clearInterval(timer);
-        // Если нужно показать "+", добавим его
         if (target === 80 || target === 45) {
           counter.textContent = `${target}+`;
         }
@@ -34,25 +41,24 @@ function animateCounters() {
   });
 }
 
+const statsBlock = document.querySelector('.stats-block'); 
+
 // Создаем Intersection Observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-      // Запускаем анимацию
+    if (entry.isIntersecting && !statsBlock.classList.contains('animated')) {
+      statsBlock.classList.add('visible');  
       animateCounters();
-      // Помечаем, что анимация уже прошла
-      entry.target.classList.add('animated');
-      // Останавливаем наблюдение за этим элементом (если нужно)
-      observer.unobserve(entry.target);
+      statsBlock.classList.add('animated');
+      observer.unobserve(statsBlock);
     }
   });
 }, {
-  threshold: 0.1, // Элемент считается видимым, если 10% его высоты в зоне просмотра
-  rootMargin: '0px 0px -50px 0px' // Начинаем анимацию, когда элемент на 50px выше нижнего края экрана
+  threshold: 0.3,
+  rootMargin: '0px 0px -50px 0px'
 });
 
-// Находим блок со статистикой и начинаем наблюдать
-const statsBlock = document.querySelector('.stats-block');
+
 if (statsBlock) {
-  observer.observe(statsBlock);
+  observer.observe(statsBlock); 
 }

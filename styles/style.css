@@ -22,7 +22,7 @@ body {
     left: 50%;
     z-index: 1000;
     animation: headerSlideDown 0.6s ease-out forwards;
-    opacity: 0; 
+    opacity: 0;
 }
 
 .header-container {
@@ -35,14 +35,15 @@ body {
 
 /* Ключевые кадры анимации */
 @keyframes headerSlideDown {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -100%); 
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 /** Блок логотипа и надписи **/
@@ -59,11 +60,11 @@ body {
 }
 
 /** Блок с тексом логотипа **/
-.main-page header .logo-block .text-block{
+.main-page header .logo-block .text-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    white-space: nowrap 
+    white-space: nowrap
 }
 
 /** Стили названия компании **/
@@ -97,7 +98,7 @@ body {
     white-space: nowrap;
     position: relative;
     padding-bottom: 4px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .desktop-menu ul li a::after {
@@ -135,11 +136,11 @@ body {
 }
 
 .phone-number a {
-  color:#F97316;
+    color: #F97316;
 }
 
 .phone-number:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 /** Бургер меню **/
@@ -150,8 +151,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20px; 
-    height: 20px; 
+    width: 20px;
+    height: 20px;
     padding: 0;
     display: none;
 }
@@ -160,8 +161,8 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 2px; 
-    background-color: #333; 
+    height: 2px;
+    background-color: #333;
     transition: background-color 0.3s ease;
 }
 
@@ -171,42 +172,50 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    height: 2px; 
-    background-color: #333; 
+    height: 2px;
+    background-color: #333;
     transition: transform 0.3s ease;
 }
 
 .menu-toggle .hamburger::before {
-    top: -8px; 
+    top: -8px;
 }
 
 .menu-toggle .hamburger::after {
-    top: 8px; 
+    top: 8px;
 }
 
 .menu-toggle.active .hamburger {
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .menu-toggle.active .hamburger::before {
-    transform: translateY(8px) rotate(45deg); 
+    transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle.active .hamburger::after {
-    transform: translateY(-8px) rotate(-45deg); 
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /** Стили для всплывающего навигационного меню **/
 .mobile-menu {
     position: fixed;
-    top: 90px; 
+    top: 90px;
     left: 0;
     width: 100vw;
     z-index: 900;
-    transform: translateY(-100%); 
-    transition: transform 0.6s ease-in-out; 
-    visibility: hidden; 
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    pointer-events: none; /* блокируем взаимодействие, когда скрыт */
     background-color: white;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* разрешаем взаимодействие */
+    border-top: 1px solid #cbd5e0;
 }
 
 .mobile-menu ul {
@@ -222,20 +231,14 @@ body {
     line-height: 1.5rem;
     font-weight: 400;
     color: rgb(52, 66, 86);
-    white-space: nowrap; 
-}
-
-.mobile-menu.active {
-    transform: translateY(0);
-    visibility: visible;
-    border-top: 1px solid #cbd5e0;
+    white-space: nowrap;
 }
 
 /** ВСЕ ЧТО СВЯЗАНО С ОСНОВНЫМ КОНТЕНТОМ НА СТРАНИЦЕ **/
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /** 1й блок **/
@@ -254,14 +257,14 @@ main {
     width: 40%;
     height: 90%;
     padding: 40px 0;
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 1s ease, transform 1s ease; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .hero .text.visible {
-    opacity: 1; 
-    transform: translateY(0); 
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /** Заголовок **/
@@ -296,8 +299,8 @@ main {
     width: 55%;
     line-height: 1.2;
     font-size: 1rem;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
 /** Анимация кнопки коммерческого предложения **/
@@ -305,75 +308,129 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; 
+    left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); 
-    transition: left 0.6s ease-in-out; 
-    z-index: 1; 
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease-in-out;
+    z-index: 1;
 }
 
 .main-page .hero .text a:hover::before {
-    left: 100%; 
+    left: 100%;
 }
 
-.main-page .hero .text a > * {
+.main-page .hero .text a>* {
     z-index: 2;
     position: relative;
 }
 
 /** 2й блок **/
 .main-page .advantages {
-  width: clamp(900px, 70vw, 1400px);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматическое заполнение */
-  gap: 24px; 
-  margin: 40px auto;
-  padding: 20px;
-  animation: slideInFromBottom 0.8s ease-out forwards;
-  opacity: 0;
+    width: clamp(900px, 70vw, 1400px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 /** Анимация 2го блока **/
 @keyframes slideInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /** Оформлени карточек **/
 .main-page .advantages .card {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #F97316;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #F97316;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main-page .advantages .card:hover {
-  transform: translateY(-5px); /* Поднимаем на 5 пикселей вверх */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); /* Добавляем тень */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 /** Оформлени текста картчоек **/
 .main-page .advantages .card h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  font-family: Montserrat, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
 }
 
-.main-page .advantages .card p{
-  font-size: 1rem;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6)
+.main-page .advantages .card p {
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6)
 }
 
+/** 3й блок **/
+.main-page .stats-block {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
+    gap: 2rem;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(63, 77, 102), rgba(74, 85, 104, 0.95));
+    opacity: 0;  
+    transform: translateY(30px); 
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; 
+}
+
+.main-page .stats-block.visible {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+
+.main-page .stats-block .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/** Изменениц цвета svg фигур **/
+.main-page  .stats-block .briefcase-icon {
+    fill: #F97316 !important;
+}
+
+.main-page  .stats-block .calendar-icon g path {
+    stroke: #F97316 !important;
+}
+
+.main-page  .stats-block .person-icon {
+    fill: #F97316 !important;
+}
+
+/** Стили текста **/
+.main-page .stats-block .stat-item span {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1)
+}
+
+.main-page .stats-block .stat-item p {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6)
+}
 
