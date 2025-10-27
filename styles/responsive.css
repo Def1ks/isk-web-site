@@ -20,6 +20,14 @@
   .main-page .section-1 .text a{
     font-size: 0.9rem;
   }
+
+  .main-page .section-2 {
+    width: 80%;
+  }
+
+  .main-page .section-2 {
+    grid-template-columns: 1fr 1fr; 
+  }
 }
 
 /** Сенсорные устройства **/
@@ -52,6 +60,10 @@
   .main-page .section-1 .text a{
     font-size: 0.8rem;
   }
+
+  .main-page .section-2 {
+    width: 80%;
+  }
 }
 
 /** Стили для телефонов **/
@@ -63,9 +75,12 @@
   .main-page .section-1 .text a {
     width: 70%;
   }
+  .main-page .section-2 {
+    grid-template-columns: 1fr; /* Выстраиваем в одну колонку */
+  }
 }
 
 /** Стили для очень маленьких телефонов **/
 @media (max-width: 400px) {
-    
+
 }
