@@ -1,21 +1,37 @@
 // Функция бургер меню
 const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.mobile-menu'); 
-menuToggle.addEventListener('click', function() {
-  this.classList.toggle('active');
-  menu.classList.toggle('active'); 
-});
+const menu = document.querySelector('.mobile-menu');
 
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !menuToggle.contains(e.target) && menu.classList.contains('active')) {
-    menu.classList.remove('active');
-    menuToggle.classList.remove('active');
-  }
-});
+if (menuToggle && menu) {
+  menuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
 
+  // Закрытие меню при клике по ссылке внутри него
+  const navLinks = menu.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+
+  // Закрытие меню при клике вне его области
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !menuToggle.contains(e.target) && menu.classList.contains('active')) {
+      menu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+  });
+}
+
+// Появление текста в hero-секции
 document.addEventListener('DOMContentLoaded', function() {
   const textElement = document.querySelector('.hero .text');
-  textElement.classList.add('visible');
+  if (textElement) {
+    textElement.classList.add('visible');
+  }
 });
 
 // Функция для анимации счётчиков
@@ -41,24 +57,44 @@ function animateCounters() {
   });
 }
 
-const statsBlock = document.querySelector('.stats-block'); 
+// Элементы
+const statsBlock = document.querySelector('.stats-block');
+const serviceTitle = document.querySelector('.main-page .services-section h2');
+const serviceDesc = document.querySelector('.main-page .services-section .section-intro'); // первый <p> в секции
+const serviceCards = document.querySelectorAll('.main-page .services-section .services-grid .service-card');
 
-// Создаем Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !statsBlock.classList.contains('animated')) {
-      statsBlock.classList.add('visible');  
-      animateCounters();
-      statsBlock.classList.add('animated');
-      observer.unobserve(statsBlock);
-    }
+// Собираем все наблюдаемые элементы
+const observedElements = [];
+
+if (statsBlock) observedElements.push(statsBlock);
+if (serviceTitle) observedElements.push(serviceTitle);
+if (serviceDesc) observedElements.push(serviceDesc);
+serviceCards.forEach(card => observedElements.push(card));
+
+// Создаём один observer
+if (observedElements.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (!entry.isIntersecting) return;
+
+      // Статистика — особая логика
+      if (el === statsBlock && !el.classList.contains('animated')) {
+        el.classList.add('visible', 'animated');
+        animateCounters();
+        observer.unobserve(el);
+        return;
+      }
+
+      // Все остальные элементы (h2, p, карточки)
+      el.classList.add('visible');
+      observer.unobserve(el); // анимация один раз
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
   });
-}, {
-  threshold: 0.3,
-  rootMargin: '0px 0px -50px 0px'
-});
 
-
-if (statsBlock) {
-  observer.observe(statsBlock); 
+  // Наблюдаем за всеми
+  observedElements.forEach(el => observer.observe(el));
 }

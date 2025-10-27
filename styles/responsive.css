@@ -28,6 +28,10 @@
   .main-page .advantages {
     grid-template-columns: 1fr 1fr;
   }
+
+  .main-page .services-section .services-grid {
+    grid-template-columns: repeat(2, minmax(250px, 400px));
+  }
 }
 
 /** Сенсорные устройства **/
@@ -66,7 +70,6 @@
   }
   .main-page .stats-block {
         grid-template-columns: 1fr; 
-        text-align: center; 
     }
 }
 
@@ -82,6 +85,10 @@
 
   .main-page .advantages {
     grid-template-columns: 1fr;
+  }
+
+  .main-page .services-section .services-grid {
+    grid-template-columns: repeat(1, minmax(250px, 400px));
   }
 }
 
