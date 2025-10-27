@@ -6,7 +6,7 @@ menuToggle.addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const textElement = document.querySelector('.section-1 .text');
+  const textElement = document.querySelector('.hero .text');
   textElement.classList.add('visible');
 });
 

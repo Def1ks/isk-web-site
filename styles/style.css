@@ -239,14 +239,14 @@ main {
 }
 
 /** 1й блок **/
-.main-page .section-1 {
+.main-page .hero {
     margin-top: 90px;
     width: 100vw;
     height: 500px;
     background: linear-gradient(to bottom, rgb(63, 77, 102), rgba(74, 85, 104, 0.95));
 }
 
-.main-page .section-1 .text {
+.main-page .hero .text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,13 +259,13 @@ main {
     transition: opacity 1s ease, transform 1s ease; 
 }
 
-.section-1 .text.visible {
+.hero .text.visible {
     opacity: 1; 
     transform: translateY(0); 
 }
 
 /** Заголовок **/
-.main-page .section-1 .text h1 {
+.main-page .hero .text h1 {
     font-family: Montserrat, sans-serif;
     font-size: 3.2rem;
     line-height: 1.2;
@@ -274,7 +274,7 @@ main {
 }
 
 /** Текст под заголовком **/
-.main-page .section-1 .text p {
+.main-page .hero .text p {
     font-family: Montserrat, sans-serif;
     line-height: 1.2;
     font-size: 1.15rem;
@@ -283,7 +283,7 @@ main {
 }
 
 /** Кнопка коммерческого предложения **/
-.main-page .section-1 .text a {
+.main-page .hero .text a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -301,7 +301,7 @@ main {
 }
 
 /** Анимация кнопки коммерческого предложения **/
-.main-page .section-1 .text a::before {
+.main-page .hero .text a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -313,17 +313,17 @@ main {
     z-index: 1; 
 }
 
-.main-page .section-1 .text a:hover::before {
+.main-page .hero .text a:hover::before {
     left: 100%; 
 }
 
-.main-page .section-1 .text a > * {
+.main-page .hero .text a > * {
     z-index: 2;
     position: relative;
 }
 
 /** 2й блок **/
-.main-page .section-2 {
+.main-page .advantages {
   width: clamp(900px, 70vw, 1400px);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматическое заполнение */
@@ -347,7 +347,7 @@ main {
 }
 
 /** Оформлени карточек **/
-.main-page .section-2 .card {
+.main-page .advantages .card {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-left: 5px solid #F97316;
@@ -357,19 +357,19 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
 }
 
-.main-page .section-2 .card:hover {
+.main-page .advantages .card:hover {
   transform: translateY(-5px); /* Поднимаем на 5 пикселей вверх */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); /* Добавляем тень */
 }
 
 /** Оформлени текста картчоек **/
-.main-page .section-2 .card h2 {
+.main-page .advantages .card h2 {
   font-size: 1.15rem;
   font-weight: 700;
   font-family: Montserrat, sans-serif;
 }
 
-.main-page .section-2 .card p{
+.main-page .advantages .card p{
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
   font-weight: 500;

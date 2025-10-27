@@ -5,27 +5,27 @@
     width: 100%;
   }
 
-  .main-page .section-1 .text {
+  .main-page .hero .text {
     margin-left: 10%;
   }
 
-  .main-page .section-1 .text h1{
+  .main-page .hero .text h1{
     font-size: 2.7rem;
   }
 
-  .main-page .section-1 .text p{
+  .main-page .hero .text p{
     font-size: 1rem;
   }
 
-  .main-page .section-1 .text a{
+  .main-page .hero .text a{
     font-size: 0.9rem;
   }
 
-  .main-page .section-2 {
+  .main-page .advantages {
     width: 80%;
   }
 
-  .main-page .section-2 {
+  .main-page .advantages {
     grid-template-columns: 1fr 1fr; 
   }
 }
@@ -45,37 +45,37 @@
     display: block;
   }
 
-  .main-page .section-1 .text {
+  .main-page .hero .text {
     width: 55%;
   }
 
-  .main-page .section-1 .text h1{
+  .main-page .hero .text h1{
     font-size: 2.4rem;
   }
 
-  .main-page .section-1 .text p{
+  .main-page .hero .text p{
     font-size: 0.9rem;
   }
 
-  .main-page .section-1 .text a{
+  .main-page .hero .text a{
     font-size: 0.8rem;
   }
 
-  .main-page .section-2 {
+  .main-page .advantages {
     width: 80%;
   }
 }
 
 /** Стили для телефонов **/
 @media (max-width: 800px) {
-  .main-page .section-1 .text {
+  .main-page .hero .text {
     width: 75%;
   }
 
-  .main-page .section-1 .text a {
+  .main-page .hero .text a {
     width: 70%;
   }
-  .main-page .section-2 {
+  .main-page .advantages {
     grid-template-columns: 1fr; /* Выстраиваем в одну колонку */
   }
 }
