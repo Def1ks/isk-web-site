@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.mobile-menu');
 
 if (menuToggle && menu) {
-  menuToggle.addEventListener('click', function() {
+  menuToggle.addEventListener('click', function () {
     this.classList.toggle('active');
     menu.classList.toggle('active');
   });
@@ -27,7 +27,7 @@ if (menuToggle && menu) {
 }
 
 // Появление текста в hero-секции
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const textElement = document.querySelector('.hero .text');
   if (textElement) {
     textElement.classList.add('visible');
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function animateCounters() {
   const counters = document.querySelectorAll('.stat-number');
   counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target'); 
-    const duration = 1500; 
+    const target = +counter.getAttribute('data-target');
+    const duration = 1500;
     let start = 0;
-    const stepTime = Math.abs(Math.floor(duration / target)); 
+    const stepTime = Math.abs(Math.floor(duration / target));
 
     const timer = setInterval(() => {
       start += 1;
@@ -59,16 +59,16 @@ function animateCounters() {
 
 // Элементы
 const statsBlock = document.querySelector('.stats-block');
-const serviceTitle = document.querySelector('.main-page .services-section h2');
-const serviceDesc = document.querySelector('.main-page .services-section .section-intro'); // первый <p> в секции
-const serviceCards = document.querySelectorAll('.main-page .services-section .services-grid .service-card');
+const allTitles = document.querySelectorAll('.main-page .section-block h2');
+const allIntros = document.querySelectorAll('.main-page .section-block .section-intro');
+const serviceCards = document.querySelectorAll('.main-page .section-block .section-grid .card');
 
 // Собираем все наблюдаемые элементы
 const observedElements = [];
 
 if (statsBlock) observedElements.push(statsBlock);
-if (serviceTitle) observedElements.push(serviceTitle);
-if (serviceDesc) observedElements.push(serviceDesc);
+allTitles.forEach(el => observedElements.push(el));
+allIntros.forEach(el => observedElements.push(el));
 serviceCards.forEach(card => observedElements.push(card));
 
 // Создаём один observer
@@ -86,9 +86,8 @@ if (observedElements.length > 0) {
         return;
       }
 
-      // Все остальные элементы (h2, p, карточки)
       el.classList.add('visible');
-      observer.unobserve(el); // анимация один раз
+      observer.unobserve(el);
     });
   }, {
     threshold: 0.1,
