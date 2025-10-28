@@ -5,10 +5,6 @@
     width: 100%;
   }
 
-  .main-page .hero .text {
-    margin-left: 10%;
-  }
-
   .main-page .hero .text h1 {
     font-size: 2.7rem;
   }
@@ -54,15 +50,15 @@
   }
 
   .main-page .hero .text h1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   .main-page .hero .text p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .main-page .hero .text a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .main-page .advantages {
@@ -71,6 +67,32 @@
 
   .main-page .stats-block {
     grid-template-columns: 1fr;
+  }
+
+  .main-page .section-date {
+    max-width: 650px;
+  }
+
+  .main-page .section-about-us .section-company-values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-page .section-about-us .section-about-us-text {
+    max-width: 650px;
+  }
+
+  .main-page .section-about-us .section-about-us-quote {
+    max-width: 650px;
+  }
+
+  .main-page .section-about-us .section-license .licenses {
+    max-width: 650px;
+    grid-template-columns: repeat(2, minmax(200px, 250px));
+  }
+
+  .main-page .section-about-us .section-contact-info {
+    max-width: 650px;
+    width: 90%;
   }
 }
 
@@ -90,8 +112,39 @@
 
   .main-page .section-block .section-grid {
     grid-template-columns: repeat(1, minmax(250px, 400px));
+    margin-inline: 50px;
   }
+
+  .main-page .section-about-us .section-company-values {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main-page .section-about-us .section-license .licenses {
+    grid-template-columns: repeat(1, minmax(200px, 250px));
+  }
+
 }
 
 /** Стили для очень маленьких телефонов **/
-@media (max-width: 400px) {}
+@media (max-width: 500px) {
+  .main-page .hero .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .main-page .hero .text p {
+    font-size: 1rem;
+  }
+
+  .main-page .hero .text a {
+    font-size: 0.8rem;
+  }
+
+  .main-page .advantages {
+    margin-inline: 10px;
+    padding: 0px;
+  }
+
+  .main-page .section-block .section-grid {
+    margin-inline: 10px;
+  }
+}

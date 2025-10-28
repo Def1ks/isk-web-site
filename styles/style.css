@@ -234,6 +234,11 @@ body {
     white-space: nowrap;
 }
 
+/** Для якорных ссылок**/
+#services, #projects, #about-us {
+  scroll-margin-top: 80px;
+}
+
 /** ВСЕ ЧТО СВЯЗАНО С ОСНОВНЫМ КОНТЕНТОМ НА СТРАНИЦЕ **/
 main {
     display: flex;
@@ -241,8 +246,10 @@ main {
     align-items: center;
 }
 
-/** 1й блок **/
+/** "Главный блок" **/
 .main-page .hero {
+    display: flex;
+    justify-content: center;
     margin-top: 90px;
     width: 100vw;
     height: 500px;
@@ -253,7 +260,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 15%;
     width: 40%;
     height: 90%;
     padding: 40px 0;
@@ -262,7 +268,7 @@ main {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-.hero .text.visible {
+.main-page .hero .text.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -325,7 +331,7 @@ main {
     position: relative;
 }
 
-/** 2й блок **/
+/** блок "Опыт и преимущества" **/
 .main-page .advantages {
     width: clamp(900px, 70vw, 1400px);
     display: grid;
@@ -380,7 +386,7 @@ main {
     color: rgba(0, 0, 0, 0.6)
 }
 
-/** 3й блок **/
+/** блок "Статистика" **/
 .main-page .stats-block {
     display: grid;
     text-align: center;
@@ -435,7 +441,7 @@ main {
     color: rgba(255, 255, 255, 0.6)
 }
 
-/** 4й и 5й блок **/
+/** 4й и 5й блок "Услуги" и "Проекты" **/
 .main-page .section-block {
     display: flex;
     flex-direction: column;
@@ -567,7 +573,6 @@ main {
 
 .main-page .section-block .section-grid .projects-card h4 {
     font-size: 0.875rem;
-    /* 14px */
     font-weight: 400;
     color: rgb(101, 117, 139);
     margin: 4px 0 0 0;
@@ -634,4 +639,316 @@ main {
     display: block;
     text-align: right;
     margin-top: 8px;
+}
+
+/* 6й блок "О компании" */
+.main-page .section-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding-top: 50px;
+}
+
+/* Блок с логотипом и названеим компании */
+.main-page .section-about-us .section-name {
+    display: flex;
+    gap: 1rem;
+    margin-inline: 40px;
+    /* Анимация появления */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-name.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-page .section-about-us .section-name img{
+    width: 100px;
+    height: 100px;
+}
+
+.main-page .section-about-us .section-name .name {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.main-page .section-about-us .section-name .name h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: rgb(52, 66, 86);
+}
+
+.main-page .section-about-us .section-name .name h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(52, 66, 86, 0.7);
+}
+
+/* Блок с датей основания и небольшой историей */
+.main-page .section-date {
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    margin-inline: 40px;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #F97316 ;
+    border-radius: 4px;
+    padding: 10px;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-date.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* svg картинка */
+.main-page .section-date .calendar-icon g path {
+    stroke: #F97316 !important;
+}
+
+/* Блок с текстом */
+.main-page .section-date .date-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+/* Дата */
+.main-page .section-date .date-text h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: rgb(52, 66, 86);
+}
+
+/* Текст под датой */
+.main-page .section-date .date-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(52, 66, 86, 0.7);
+}
+
+.main-page .section-about-us .section-company-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 850px;
+    margin-inline: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-company-values.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.main-page .section-about-us .section-company-values .value-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 15px;
+}
+
+/* svg картинки*/
+.main-page .section-about-us .section-company-values .value-card svg path {
+    fill: #F97316;
+}
+
+.main-page .section-about-us .section-company-values .value-card h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: rgb(52, 66, 86);
+}
+
+.main-page .section-about-us .section-company-values .value-card p {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(52, 66, 86, 0.7);
+}
+
+
+/* Блок с текстом */
+.main-page .section-about-us .section-about-us-text {
+    max-width: 850px;
+    margin-inline: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-about-us-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-page .section-about-us .section-about-us-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(52, 66, 86, 0.9);
+    text-align: justify;
+}
+
+/* Блок с цитатей*/
+.main-page .section-about-us .section-about-us-quote {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 850px;
+    margin-inline: 40px;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 15px;
+    padding-inline: 30px;
+    background-color: rgba(52, 66, 86, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-about-us-quote.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Цвет svg */
+.main-page .section-about-us-quote svg {
+  color: rgb(52, 66, 86); 
+}
+
+/* Стили текста */
+.main-page .section-about-us-quote p {
+  font-style: italic;
+  color: rgb(52, 66, 86); 
+}
+
+.main-page .section-about-us .section-license {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-license.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-page .section-about-us .section-license .section-license-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.main-page .section-about-us .section-license .section-license-header svg path {
+    fill:#F97316 !important;
+}
+
+.main-page .section-about-us .section-license .section-license-header h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(52, 66, 86);
+    margin-top: 5px;
+}
+
+.main-page .section-about-us .section-license .licenses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 850px;
+    margin-inline: 40px;
+}
+
+.main-page .section-about-us .section-license .licenses .card-license {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.main-page .section-about-us .section-license .licenses .card-license img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-page .section-about-us .section-license .licenses .card-license h5 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(52, 66, 86);
+}
+
+/* Блок контакной информации*/
+.main-page .section-about-us .section-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 850px;
+    width: 100%;
+    padding: 20px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    gap: 1rem;
+    margin-inline: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-page .section-about-us .section-contact-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-page .section-about-us .section-contact-info .contact-info-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-page .section-about-us .section-contact-info .contact-info-header h5 {
+    font-size: 1.5rem;
+    color: rgb(52, 66, 86);
+    text-align: center;
+}
+
+.main-page .section-about-us .section-contact-info .contact-info-header svg {
+    fill: rgb(52, 66, 86) !important;
+}
+
+.main-page .section-about-us .section-contact-info .contact-info {
+
+}
+
+.main-page .section-about-us .section-contact-info .contact-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(52, 66, 86);
+    margin-bottom: 8px;
 }
