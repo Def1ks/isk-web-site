@@ -1203,10 +1203,12 @@ main {
     text-align: center;
 }
 
-.main-page .section-contacts .contacts-block .contact-form .form-group option {
-
+/*Стили карты*/
+.main-page .section-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    max-width: 800px;
+    max-height: 450px;
 }
-
-
-
-

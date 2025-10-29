@@ -110,6 +110,10 @@
   .main-page .section-team .recruitment-info { 
     max-width: 600px;
   }
+
+  .main-page .section-map {
+    max-width: 700px;
+  }
 }
 
 /** Стили для телефонов **/
@@ -159,6 +163,9 @@
   width: 100%;
 
 }
+.main-page .section-map {
+    max-width: 400px;
+  }
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -186,5 +193,9 @@
 
   .carousel-container {
     max-width: 300px;
+  }
+
+  .main-page .section-map {
+    max-width: 250px;
   }
 }
