@@ -1192,15 +1192,45 @@ main {
 
 /*Кнопка отправить форму*/
 .main-page .section-contacts .contacts-block .contact-form .submit-btn {
-    width: 100%;
-    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 1rem; 
     background-color: #F97316;
-    color: white;
-    border: none;
+    padding: 15px;
+    width: 100%; 
+    line-height: 1.2;
+    position: relative;
+    overflow: hidden;
+    border: none; 
+    cursor: pointer;
     border-radius: 6px;
-    font-size: 1em;
-    font-weight: 500;
-    text-align: center;
+}
+
+/* Анимация блика */
+.main-page .section-contacts .contacts-block .contact-form .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.main-page .section-contacts .contacts-block .contact-form .submit-btn:hover::before {
+    left: 100%;
+}
+
+.main-page .section-contacts .contacts-block .contact-form .submit-btn > * {
+    position: relative;
+    z-index: 2;
 }
 
 /*Стили карты*/
@@ -1211,4 +1241,83 @@ main {
     margin: 30px;
     max-width: 800px;
     max-height: 450px;
+}
+
+.main-page footer {
+    min-height: 300px;
+    width: 100%;
+    background-color: rgb(52, 66, 86);
+}
+
+.main-page footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 200px;
+    padding-top: 30px;
+}
+
+.main-page footer .footer-top .footer-column {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-page footer .footer-top .footer-column .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-page footer .footer-top .footer-column .logo-block img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-page footer .footer-top .footer-column .logo-block text  {
+   display: flex;
+   flex-direction: column;
+}
+
+.main-page footer h6 {
+   font-size: 22px;
+   color: white;
+}
+
+.main-page footer p {
+   font-size: 14px;
+   color: white;
+   margin: 0px;
+}
+
+.main-page footer .block-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.main-page footer .block-text {
+    color: #F97316;
+}
+
+.main-page footer .block-text a {
+    color: white;
+}
+
+.main-page footer .block-text span {
+    color: white;
+}
+
+.main-page footer .footer-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 0.3rem;
+}
+
+.main-page footer .footer-bottom p {
+    text-align: center;
 }

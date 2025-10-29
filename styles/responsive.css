@@ -32,6 +32,14 @@
   .main-page .section-partners .carousel-container {
     max-width: 800px;
   }
+
+  .main-page footer .footer-top {
+    padding-inline: 50px;
+  }
+
+  .main-page footer .footer-top .footer-column {
+    width: 250px;
+  }
 }
 
 /** Сенсорные устройства **/
@@ -114,6 +122,10 @@
   .main-page .section-map {
     max-width: 700px;
   }
+
+  .main-page footer .footer-top .footer-column {
+    width: 200px;
+  }
 }
 
 /** Стили для телефонов **/
@@ -152,7 +164,7 @@
   }
 
   .main-page .section-team .recruitment-info { 
-    max-width: 400px;
+    max-width: 350px;
   }
 
   .main-page .section-contacts .contacts-block {
@@ -165,6 +177,17 @@
 }
 .main-page .section-map {
     max-width: 400px;
+  }
+
+  .main-page footer .footer-top {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0px;
+    gap: 1rem;
+  }
+
+  .main-page footer .footer-top .footer-column {
+    width: 400px;
   }
 }
 
@@ -191,11 +214,15 @@
     margin-inline: 10px;
   }
 
-  .carousel-container {
+  .main-page .section-map {
+    max-width: 200px;
+  }
+
+  .main-page .section-partners .carousel-container {
     max-width: 300px;
   }
 
-  .main-page .section-map {
-    max-width: 250px;
+  .main-page footer .footer-top .footer-column {
+    width: 300px;
   }
 }
