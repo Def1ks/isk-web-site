@@ -6,6 +6,18 @@ body {
     font-weight: 400;
 }
 
+/*Общая анимацния для плавного появления*/
+.fade-in {
+  opacity: 0; 
+  transition: opacity 0.7s ease-in-out; 
+}
+
+.fade-in.visible {
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+
 /** ВСЕ ЧТО СВЯЗАНО С ШАПКОЙ **/
 /** Стили шапки **/
 .main-page header {
@@ -397,14 +409,6 @@ main {
     justify-content: center;
     width: 100%;
     background: linear-gradient(to bottom, rgb(63, 77, 102), rgba(74, 85, 104, 0.95));
-    opacity: 0;
-    transform: translateY(30px);
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-.main-page .stats-block.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .main-page .stats-block .stat-item {
@@ -457,15 +461,7 @@ main {
     color: rgb(52, 66, 86);
     padding-top: 70px;
     padding-bottom: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
     text-align: center;
-}
-
-.main-page .section-block h2.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Анимация для описания секции */
@@ -476,14 +472,6 @@ main {
     padding-bottom: 50px;
     text-align: center;
     margin-inline: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.main-page .section-block .section-intro.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /** Блок с картчоками **/
@@ -656,16 +644,8 @@ main {
     display: flex;
     gap: 1rem;
     margin-inline: 40px;
-    /* Анимация появления */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-about-us .section-name.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .main-page .section-about-us .section-name img{
     width: 100px;
@@ -704,15 +684,8 @@ main {
     border-radius: 4px;
     padding: 10px;
     gap: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-date.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* svg картинка */
 .main-page .section-date .calendar-icon g path {
@@ -747,15 +720,8 @@ main {
     gap: 2rem;
     max-width: 850px;
     margin-inline: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-about-us .section-company-values.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 .main-page .section-about-us .section-company-values .value-card {
     display: flex;
     flex-direction: column;
@@ -791,14 +757,6 @@ main {
 .main-page .section-about-us .section-about-us-text {
     max-width: 850px;
     margin-inline: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.main-page .section-about-us .section-about-us-text.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .main-page .section-about-us .section-about-us-text p {
@@ -820,15 +778,8 @@ main {
     padding: 15px;
     padding-inline: 30px;
     background-color: rgba(52, 66, 86, 0.05);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-about-us .section-about-us-quote.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* Цвет svg */
 .main-page .section-about-us-quote svg {
@@ -846,15 +797,8 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-about-us .section-license.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .main-page .section-about-us .section-license .section-license-header {
     display: flex;
@@ -916,15 +860,8 @@ main {
     border-radius: 4px;
     gap: 1rem;
     margin-inline: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.main-page .section-about-us .section-contact-info.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .main-page .section-about-us .section-contact-info .contact-info-header {
     display: flex;
@@ -942,13 +879,73 @@ main {
     fill: rgb(52, 66, 86) !important;
 }
 
-.main-page .section-about-us .section-contact-info .contact-info {
-
-}
-
 .main-page .section-about-us .section-contact-info .contact-info p {
     font-size: 1rem;
     font-weight: 400;
     color: rgb(52, 66, 86);
     margin-bottom: 8px;
+}
+
+/* Блок партнеров с эффектом карусели*/
+.section-partners {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);;
+    width: 100%;
+}
+
+.section-partners h3 {
+   font-size: 2rem;
+   color: rgb(52, 66, 86);
+   font-weight: 700;
+   font-family: Montserrat, sans-serif;
+}
+
+.section-partners p {
+   font-size: 1rem;
+   padding-bottom: 2rem;
+   font-weight: 400;
+   color: rgb(101, 117, 139);
+}
+
+
+.carousel-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel-container > * {
+  flex: 0 0 100%;
+}
+
+.group {
+  display: flex;
+  gap: 1.25rem;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 20s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-container:hover .group {
+  animation-play-state: paused;
+}
+
+.carousel-card {
+  width: 200px;  
 }

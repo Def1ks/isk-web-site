@@ -28,6 +28,10 @@
   .main-page .section-block .section-grid {
     grid-template-columns: repeat(2, minmax(250px, 400px));
   }
+
+  .carousel-container {
+  max-width: 800px;
+}
 }
 
 /** Сенсорные устройства **/
@@ -94,6 +98,10 @@
     max-width: 650px;
     width: 90%;
   }
+
+  .carousel-container {
+  max-width: 600px;
+}
 }
 
 /** Стили для телефонов **/
@@ -123,6 +131,10 @@
     grid-template-columns: repeat(1, minmax(200px, 250px));
   }
 
+  .carousel-container {
+  max-width: 450px;
+}
+
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -147,4 +159,8 @@
   .main-page .section-block .section-grid {
     margin-inline: 10px;
   }
+
+  .carousel-container {
+  max-width: 300px;
+}
 }
