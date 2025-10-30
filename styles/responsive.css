@@ -234,3 +234,23 @@
     width: 300px;
   }
 }
+
+@media (hover: none) and (pointer: coarse) {
+  body.main-page .card:hover,
+  body.main-page .value-card:hover,
+  body.main-page .card-license:hover,
+  body.main-page .card-person:hover
+    {
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    background: inherit !important;
+  }
+
+  body.main-page .carousel-card:hover {
+    transform: none !important;
+  }
+
+  .main-page .section-partners .carousel-container:hover .group {
+    animation-play-state: running !important;
+  }
+}
