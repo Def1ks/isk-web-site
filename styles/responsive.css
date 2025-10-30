@@ -33,12 +33,17 @@
     max-width: 800px;
   }
 
+  .main-page .section-map .map-container {
+    width: 500px;
+    height: 300px;
+}
+
   .main-page footer .footer-top {
     padding-inline: 50px;
   }
 
   .main-page footer .footer-top .footer-column {
-    width: 250px;
+    width: 300px;
   }
 }
 
@@ -124,7 +129,8 @@
   }
 
   .main-page footer .footer-top .footer-column {
-    width: 200px;
+    width: 250px;
+    font-size: 12px;
   }
 }
 
@@ -188,6 +194,7 @@
 
   .main-page footer .footer-top .footer-column {
     width: 400px;
+    margin-bottom: 30px;
   }
 }
 
@@ -214,9 +221,10 @@
     margin-inline: 10px;
   }
 
-  .main-page .section-map {
-    max-width: 200px;
-  }
+  .main-page .section-map .map-container {
+    width: 250px;
+    height: 300px;
+}
 
   .main-page .section-partners .carousel-container {
     max-width: 300px;

@@ -82,7 +82,7 @@
                     • Земляные работы
                     • Общестроительные работы
                 </p>
-                <a href="#">Получить коммерческое предложение
+                <a href="#contacts">Получить коммерческое предложение
                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 12H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -575,10 +575,11 @@
                 </div>
         </section>
         <section class="section-contacts" id="contacts">
-            <h3>Контакты</h3>
-            <p>Свяжитесь с нами для получения консультации или коммерческого предложения</p>
+            <h3 class="fade-in fade-on-scroll">Контакты</h3>
+            <p class="fade-in fade-on-scroll">Свяжитесь с нами для получения консультации или коммерческого предложения
+            </p>
             <div class="contacts-block">
-                <div class="contacts-info">
+                <div class="contacts-info fade-in fade-on-scroll">
                     <div class="contact-item">
                         <div class="block-text">
                             <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
@@ -608,21 +609,13 @@
                     </div>
                     <div class="contact-item">
                         <div class="block-text">
-                            <svg width="30px" height="30px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <style>
-                                        .cls-1 {
-                                            fill: none;
-                                            stroke: #020202;
-                                            stroke-miterlimit: 10;
-                                            stroke-width: 1.91px;
-                                        }
-                                    </style>
-                                </defs>
-                                <path class="cls-1"
+                                <path class="svg-icon-location" fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                    stroke-width="1.91px"
                                     d="M19.64,9.14C19.64,15.82,12,22.5,12,22.5S4.36,15.82,4.36,9.14a7.64,7.64,0,0,1,15.28,0Z" />
-                                <circle class="cls-1" cx="12" cy="9.14" r="2.86" />
+                                <circle class="svg-icon-location" fill="none" stroke="currentColor"
+                                    stroke-miterlimit="10" stroke-width="1.91px" cx="12" cy="9.14" r="2.86" />
                             </svg>
                             <div class="text">
                                 <strong>Фактический адрес</strong>
@@ -646,13 +639,16 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form fade-in fade-on-scroll">
                     <h4>Форма обратной связи</h4>
                     <div class="form-group">
                         <input type="text" placeholder="Ваше имя" required>
                     </div>
                     <div class="form-group">
                         <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Почта" required>
                     </div>
                     <div class="form-group">
                         <select required>
@@ -672,11 +668,13 @@
                 </form>
             </div>
         </section>
-        <section class="section-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2364.925419665046!2d55.95485207730089!3d53.648301972378334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDM4JzUzLjkiTiA1NcKwNTcnMjYuNyJF!5e0!3m2!1sru!2sru!4v1761750710643!5m2!1sru!2sru"
-                width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="section-map fade-in fade-on-scroll">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2364.925419665046!2d55.95485207730089!3d53.648301972378334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDM4JzUzLjkiTiA1NcKwNTcnMjYuNyJF!5e0!3m2!1sru!2sru!4v1761750710643!5m2!1sru!2sru"
+                    style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
     <footer>
@@ -722,21 +720,13 @@
                     </div>
                 </div>
                 <div class="block-text">
-                    <svg width="20px" height="20px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer_1"
                         xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: none;
-                                    stroke: #F97316;;
-                                    stroke-miterlimit: 10;
-                                    stroke-width: 1.91px;
-                                }
-                            </style>
-                        </defs>
-                        <path class="cls-1"
+                        <path class="svg-icon-location" fill="none" stroke="currentColor" stroke-miterlimit="10"
+                            stroke-width="1.91px"
                             d="M19.64,9.14C19.64,15.82,12,22.5,12,22.5S4.36,15.82,4.36,9.14a7.64,7.64,0,0,1,15.28,0Z" />
-                        <circle class="cls-1" cx="12" cy="9.14" r="2.86" />
+                        <circle class="svg-icon-location" fill="none" stroke="currentColor" stroke-miterlimit="10"
+                            stroke-width="1.91px" cx="12" cy="9.14" r="2.86" />
                     </svg>
                     <div class="text">
                         <span>Республика Башкортостан,<br>г. Стерлитамак, ул. Элеваторная, 2Вс1</span>

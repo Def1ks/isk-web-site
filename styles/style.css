@@ -1149,7 +1149,7 @@ main {
     font-size: 0.9rem;
     font-weight: 400;
     color: #F97316;
-}
+}  
 
 /*Форма обратной связи */
 .main-page .section-contacts .contacts-block .contact-form {
@@ -1239,8 +1239,18 @@ main {
     align-items: center;
     justify-content: center;
     margin: 30px;
-    max-width: 800px;
-    max-height: 450px;
+}
+
+.main-page .section-map .map-container {
+    width: 700px;
+    height: 400px;
+}
+
+.main-page .map-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
 }
 
 .main-page footer {
