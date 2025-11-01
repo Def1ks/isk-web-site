@@ -385,13 +385,13 @@ main {
 
 /** Оформлени текста картчоек **/
 .main-page .advantages .card h2 {
-    font-size: 1.15rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.8rem, 1.15rem);
     font-weight: 700;
     font-family: Montserrat, sans-serif;
 }
 
 .main-page .advantages .card p {
-    font-size: 1rem;
+    font-size: clamp(0.6rem, 0.5vw + 0.8rem, 1rem);
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6)
@@ -433,13 +433,13 @@ main {
 
 /** Стили текста **/
 .main-page .stats-block .stat-item span {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 1.5vw + 0.9rem, 2.5rem);
     font-weight: 600;
     color: rgba(255, 255, 255, 1)
 }
 
 .main-page .stats-block .stat-item p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw + 0.9rem, 1.5rem);
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6)
 }
@@ -455,7 +455,7 @@ main {
 /* Анимация для заголовка секции */
 .main-page .section-block h2 {
     font-family: Montserrat, sans-serif;
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 1.5vw + 0.9rem, 2.25rem);
     font-weight: 700;
     color: rgb(52, 66, 86);
     padding-top: 70px;
@@ -465,7 +465,7 @@ main {
 
 /* Анимация для описания секции */
 .main-page .section-block .section-intro {
-    font-size: 1.125rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.125rem);
     font-weight: 400;
     color: rgb(101, 117, 139);
     padding-bottom: 50px;
@@ -523,14 +523,14 @@ main {
 
 .main-page .section-block .section-grid .card h3 {
     margin: 20px;
-    font-size: 20px;
+    font-size: clamp(0.9rem, 1vw + 0.9rem, 1.25rem);
     color: rgb(52, 66, 86);
 }
 
 .main-page .section-block .section-grid .card p {
     text-align: left;
     padding: 0 10px 20px 20px;
-    font-size: 16px;
+    font-size: clamp(0.7rem, 0.25vw + 0.9rem, 1rem);
     color: rgb(101, 117, 139);
 }
 
@@ -551,7 +551,7 @@ main {
 
 /* Заголовок проекта  */
 .main-page .section-block .section-grid .projects-card h3 {
-    font-size: 1.375rem;
+    font-size: clamp(1rem, 0.5vw + 0.9rem, 1.375rem);
     font-weight: 700;
     color: rgb(52, 66, 86);
     margin: 0;
@@ -560,6 +560,7 @@ main {
 
 .main-page .section-block .section-grid .projects-card h4 {
     font-size: 0.875rem;
+    font-size: clamp(0.7rem, 0.1vw + 0.9rem, 0.875rem);
     font-weight: 400;
     color: rgb(101, 117, 139);
     margin: 4px 0 0 0;
@@ -646,7 +647,7 @@ main {
 }
 
 
-.main-page .section-about-us .section-name img{
+.main-page .section-about-us .section-name img {
     width: 100px;
     height: 100px;
 }
@@ -660,14 +661,14 @@ main {
 
 .main-page .section-about-us .section-name .name h2 {
     font-family: Montserrat, sans-serif;
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 0.5vw + 0.9rem, 2.25rem);
     font-weight: 800;
     color: rgb(52, 66, 86);
 }
 
 .main-page .section-about-us .section-name .name h3 {
     font-family: Montserrat, sans-serif;
-    font-size: 1.25rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.25rem);
     font-weight: 400;
     color: rgba(52, 66, 86, 0.7);
 }
@@ -701,14 +702,14 @@ main {
 
 /* Дата */
 .main-page .section-date .date-text h4 {
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.2rem);
     font-weight: 800;
     color: rgb(52, 66, 86);
 }
 
 /* Текст под датой */
 .main-page .section-date .date-text p {
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 0.2vw + 0.9rem, 1rem);
     font-weight: 400;
     color: rgba(52, 66, 86, 0.7);
 }
@@ -745,14 +746,14 @@ main {
 
 .main-page .section-about-us .section-company-values .value-card h4 {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.1rem);
     font-weight: 800;
     color: rgb(52, 66, 86);
 }
 
 .main-page .section-about-us .section-company-values .value-card p {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: clamp(0.6rem, 0.5vw + 0.9rem, 0.85rem);
     font-weight: 400;
     color: rgba(52, 66, 86, 0.7);
 }
@@ -765,7 +766,7 @@ main {
 }
 
 .main-page .section-about-us .section-about-us-text p {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 0.2vw + 0.9rem, 1rem);
     font-weight: 400;
     color: rgba(52, 66, 86, 0.9);
     text-align: justify;
@@ -817,7 +818,7 @@ main {
 
 .main-page .section-about-us .section-license .section-license-header h3 {
     font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.3rem);
     font-weight: 700;
     color: rgb(52, 66, 86);
     margin-top: 5px;
@@ -881,7 +882,7 @@ main {
 }
 
 .main-page .section-about-us .section-contact-info .contact-info-header h5 {
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 0.5vw + 0.9rem, 1.5rem);
     color: rgb(52, 66, 86);
     text-align: center;
 }
@@ -891,7 +892,7 @@ main {
 }
 
 .main-page .section-about-us .section-contact-info .contact-info p {
-    font-size: 1rem;
+    font-size: clamp(0.6rem, 0.3vw + 0.9rem, 1rem);
     font-weight: 400;
     color: rgb(52, 66, 86);
     margin-bottom: 8px;
@@ -913,6 +914,7 @@ main {
 
 .main-page .section-partners h3 {
    font-size: 2rem;
+   font-size: clamp(1.5rem, 0.5vw + 0.9rem, 2rem);
    color: rgb(52, 66, 86);
    font-weight: 700;
    font-family: Montserrat, sans-serif;
@@ -920,7 +922,7 @@ main {
 }
 
 .main-page .section-partners p {
-   font-size: 1rem;
+   font-size: clamp(0.7rem, 0.5vw + 0.9rem, 1rem);
    padding-bottom: 2rem;
    font-weight: 400;
    color: rgb(101, 117, 139);
@@ -981,7 +983,7 @@ main {
 }
 
 .main-page .section-team h3 {
-   font-size: 2rem;
+   font-size: clamp(1.5rem, 0.5vw + 0.9rem, 2rem);
    color: rgb(52, 66, 86);
    font-weight: 700;
    font-family: Montserrat, sans-serif;
@@ -989,7 +991,7 @@ main {
 }
 
 .main-page .section-team p {
-   font-size: 1rem;
+   font-size: clamp(0.7rem, 0.5vw + 0.9rem, 1rem);
    padding-bottom: 2rem;
    font-weight: 400;
    color: rgb(101, 117, 139);
@@ -1073,13 +1075,13 @@ main {
 }
 
 .main-page .section-team .recruitment-info .recruitment-text h5 { 
-    font-size: 22px;
+    font-size: clamp(0.7rem, 0.5vw + 0.9rem, 1.5rem);
     font-weight: 700;
     color: rgb(52, 66, 86)
 }
 
 .main-page .section-team .recruitment-info .recruitment-text p { 
-    font-size: 14px;
+    font-size: clamp(0.5rem, 0.2vw + 0.9rem, 1rem);
     font-weight: 400;
     color: rgb(84, 102, 126);
     text-align: left;
@@ -1095,7 +1097,7 @@ main {
 }
 
 .main-page .section-contacts h3 {
-   font-size: 2rem;
+    font-size: clamp(1.5rem, 0.5vw + 0.9rem, 2rem);
    color: rgb(52, 66, 86);
    font-weight: 700;
    font-family: Montserrat, sans-serif;
@@ -1103,7 +1105,7 @@ main {
 }
 
 .main-page .section-contacts p {
-   font-size: 1rem;
+   font-size: clamp(0.7rem, 0.5vw + 0.9rem, 1rem);
    padding-bottom: 2rem;
    font-weight: 400;
    color: rgb(101, 117, 139);
@@ -1140,13 +1142,13 @@ main {
 }
 
 .main-page .section-contacts .contacts-block .contacts-info .block-text .text span {
-    font-size: 0.9rem;
+    font-size: clamp(0.5rem, 0.2vw + 0.9rem, 0.9rem);
     font-weight: 400;
     color: rgb(101, 117, 139)
 }
 
 .main-page .section-contacts .contacts-block .contacts-info .block-text .text a {
-    font-size: 0.9rem;
+    font-size: clamp(0.5rem, 0.2vw + 0.9rem, 0.9rem);
     font-weight: 400;
     color: #F97316;
 }  
@@ -1164,7 +1166,7 @@ main {
 }
 
 .main-page .section-contacts .contacts-block .contact-form h4 {
-    font-size: 1.25em;
+    font-size: clamp(0.9rem, 0.4vw + 0.9rem, 1.25rem);
     font-weight: 700;
     color: rgb(63, 77, 102);
     align-items: center;
